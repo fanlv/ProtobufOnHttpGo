@@ -1,0 +1,13 @@
+#source 'http://gitlab.douyuios.com/douyu-ios/DouyuSpecs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+#use_frameworks!
+
+
+target 'ProtobufTestClient’ do
+
+pod 'CocoaLumberjack'
+pod 'Protobuf', '~> 3.5.0'
+
+end

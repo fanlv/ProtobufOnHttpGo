@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+// 生成go代码
+//protoc --go_out=. user.proto
+
+// 生成oc代码
+//protoc --objc_out=. user.proto
+
+package user;
+
+
+message LoginRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message BaseResponse{
+  int64 code = 1;
+  string msg = 2;
+}
+
+
+message User{
+    string uid = 1;
+    string name = 2;
+    string logo = 3;
+}
+message LoginResponse {
+    User user = 1;
+    BaseResponse baseResp = 255;
+}
+
+// //service 名称，客户端会用这个去调用对应方法
+// service UserService {
+//     //提供的RPC方法
+//   rpc Login (LoginRequest) returns (LoginResponse) {}
+// }
+
+
